@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      div {
+        height: 100px;
+        width: 100px;
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <button data-divclass="one">one</button>
+    <button data-divclass="two">two</button>
+
+    <div class="one">
+
+    </div>
+
+    <div class="two">
+
+    </div>
+
+    <a href="#" data-val="bear">link 1</a>
+    <a href="#" data-val="cat">link 2</a>
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript">
+      $('button').on('click', function(){
+        var divClass = $(this).data('divclass');
+        $('.' + divClass).append('hi');
+      });
+      $('a').on('click', function(){
+        //$('div').eq(0).text($(this).data('val'));
+        var val = $(this).data('val');
+        if (val == 'bear'){
+          $('.one').append(val);
+        }else{
+          $('.two').append(val);
+        }
+      });
+    </script>
+  </body>
+</html>
