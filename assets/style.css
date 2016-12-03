@@ -1,0 +1,19 @@
+
+body {
+	background-image: url("../images/Jericoacoara.png");
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-size: cover;
+	width: 100%;
+  	height: auto;
+	color: red;
+}
+
+
+#imgc {
+	color: black;
+	border-color: black;
+	width: 80px;
+	height: auto;
+}
+
